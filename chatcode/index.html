@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Chat César</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>🔐 Chat César</h1>
+
+
+<div class="ligne">
+
+    <div class="bloc">
+
+        <h2>Chat crypté</h2>
+
+        <input id="pseudo"
+        placeholder="Pseudo">
+
+        <input id="salon"
+        placeholder="Code salon 12 chiffres"
+        maxlength="12">
+
+        <input id="cle"
+        type="number"
+        placeholder="Clé César d'envoi">
+
+        <button onclick="connexionSalon()">
+        Rejoindre le salon
+        </button>
+
+        <div id="messages"></div>
+
+        <input id="texte"
+        placeholder="Message">
+
+        <button onclick="envoyer()">
+        Envoyer crypté
+        </button>
+
+    </div>
+
+
+
+    <div class="bloc">
+
+        <h2>Décrypteur César</h2>
+
+        <textarea id="crypte"
+        placeholder="Texte crypté"></textarea>
+
+        <input id="cleDecode"
+        type="number"
+        placeholder="Clé">
+
+        <button onclick="decoder()">
+        Décrypter
+        </button>
+
+        <p id="resultat"></p>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+<script type="module" src="script.js"></script>
+
+
+</body>
+
+</html>
