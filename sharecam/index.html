@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Share Cam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="bloc">
+
+    <h2>Share Cam</h2>
+
+    <input id="pseudo" placeholder="Pseudo">
+
+    <input id="codeCam"
+    placeholder="Code caméra">
+
+    <button onclick="activerCamera()">
+        Démarrer la caméra
+    </button>
+
+
+    <video id="camera" autoplay playsinline></video>
+
+
+    <button onclick="arreterCamera()">
+        Arrêter la caméra
+    </button>
+
+</div>
+
+
+<script src="camera.js"></script>
+
+</body>
+</html>
