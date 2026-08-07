@@ -5,9 +5,12 @@ function activerCamera(){
 
 
     navigator.mediaDevices.getUserMedia({
-
-        video: true,
-        audio: true
+    video: {
+        width: { ideal: 640 },
+        height: { ideal: 480 }
+    },
+    audio: false
+})
 
     })
 
