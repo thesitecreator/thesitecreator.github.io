@@ -1,64 +1,9 @@
-let fluxCamera = null;
+const video = document.getElementById("camera");
 
-
-function activerCamera(){
-
-
-    navigator.mediaDevices.getUserMedia({
-    video: {
-        width: { ideal: 640 },
-        height: { ideal: 480 }
-    },
-    audio: false
+navigator.mediaDevices.getUserMedia({video:true})
+.then(stream => {
+    video.srcObject = stream;
 })
-
-    })
-
-
-    .then(function(flux){
-
-
-        fluxCamera = flux;
-
-
-        let video = document.getElementById("camera");
-
-
-        video.srcObject = flux;
-
-
-    })
-
-
-    .catch(function(erreur){
-
-        alert("Erreur caméra : " + erreur);
-
-    });
-
-
-}
-
-
-
-
-function arreterCamera(){
-
-
-    if(fluxCamera){
-
-
-        fluxCamera.getTracks().forEach(function(track){
-
-            track.stop();
-
-        });
-
-
-        document.getElementById("camera").srcObject = null;
-
-
-    }
-
-
-}
+.catch(error => {
+    alert(error.name + " : " + error.message);
+});
