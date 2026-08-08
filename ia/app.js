@@ -1,1 +1,0 @@
-document.querySelector("#register").addEventListener("submit",async e=>{e.preventDefault();const r=await fetch("/api/register",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({firstName:firstName.value,lastName:lastName.value,age:age.value})});const d=await r.json();if(!r.ok){error.textContent=d.error||"Erreur";return}location.href="chat.html"})
